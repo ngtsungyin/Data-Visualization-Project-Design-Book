@@ -33,9 +33,9 @@ Minimal index.html should link `css/styles.css` and `js/main.js`.
 Create a short task list and assign branches:
 
 Example task table:
-- Load data for bar chart — feature/loaddata-barchart — Mary
-- Set up home page for site — feature/homepage — John
-- Create color palette & sketches — feature/design-palette — Alex
+- Load data for bar chart — feature/loaddata-barchart — Tsung Yin
+- Set up home page for site — feature/homepage — Elisa
+- Create color palette & sketches — feature/design-palette — Elyn
 
 Keep this list updated in the README or a project board.
 
