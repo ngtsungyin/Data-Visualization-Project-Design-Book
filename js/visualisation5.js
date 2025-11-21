@@ -152,6 +152,14 @@ d3.csv('data/cleaned_speeding_data.csv').then(raw => {
       ${d.label}
     </span>`
   ).join('');
+
+}).catch(error => {
+  const loadingDiv = document.querySelector('#line-chart .chart-loading');
+  if (loadingDiv) {
+    loadingDiv.textContent = 'Error loading chart data. Please check that data/cleaned_speeding_data.csv exists and is accessible.';
+    loadingDiv.style.color = 'red';
+  }
+  console.error('Chart data load error:', error);
 });
 
 // Minimal grid line style
