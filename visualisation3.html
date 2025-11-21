@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interactive Speeding Enforcement Dashboard — National Trends</title>
+  <title>Interactive Speeding Enforcement Dashboard — Q3</title>
+  <!-- adjust path if your CSS is at a different location -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -34,16 +35,34 @@
   <a class="vis-btn" href="visualisation6.html">Visualisation 6<br><span>Location-based patterns</span></a>
 </div>
 
-    <h2 style="text-align:left;margin-top:28px;font-family:'Playfair Display',serif">1. National Trends in Speeding Fines (2008–2024)</h2>
-    <p style="text-align:left;color:var(--muted)">Shows long-term changes in fines issued nationally and compares police-issued vs camera-issued fines.</p>
+    <h2 style="text-align:left;margin-top:28px;font-family:'Playfair Display',serif;font-size: 40px;">
+      Q3 — How did the national camera vs police issued mix change from 2008–2024?
+    </h2>
+    <p style="text-align:left">
+      Shows how camera-issued and police-issued fines evolved nationally.
+      Toggle between a stacked area chart (cumulative) and multi-line view (absolute). Use the "% mode" checkbox to show proportions per year.
+    </p>
 
-    <div class="chart-placeholder">[ Chart area — embed D3.js / iframe / plot here ]</div>
+    <div style="margin:22px 0; display:flex; align-items:center; gap:12px;">
+      <button id="btn-stacked" class="btn" style="padding:8px 14px;font-size:14px">Stacked area</button>
+      <button id="btn-line" class="btn" style="padding:8px 14px;font-size:14px">Multi-line</button>
+      <label style="margin-left:8px; color:var(--muted); font-weight:600;">
+        <input id="percentMode" type="checkbox" style="margin-right:8px; vertical-align:middle"> % mode
+      </label>
+    </div>
+
+    <!-- chart container (visualisation3.js will draw into #chart) -->
+    <div id="chart" style="margin-top:18px;"></div>
+
   </main>
 
   <footer class="footer-strip">
-          <div>COS30045 DATA VISUALISATION</div>
-          <div>by Cherylynn, Ng Tsung Yin, Elisa</div>
+    <div>COS30045 DATA VISUALISATION</div>
+    <div>by Cherylynn, Ng Tsung Yin, Elisa</div>
   </footer>
-  
+
+  <!-- D3 and chart script. Adjust path to visualisation3.js if it's in a different folder -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/visualisation3.js"></script>
 </body>
 </html>
