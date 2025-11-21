@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,21 +16,24 @@
         <a href="background.html">Background</a>
         <a href="visualisation-section.html">Dashboard</a>
         <a href="team.html">Team</a>
-        <a href="visualisation5.html" class="active">Vis5</a>
       </div>
     </nav>
   </header>
-  <main>
-    <section class="vis-section">
-      <h1>Monthly Fines by Detection Method (2024)</h1>
-      <div id="vis5-chart" style="display:flex;justify-content:center;align-items:center;margin-bottom:24px;"></div>
-      <div id="vis5-legend" style="display:flex;justify-content:center;align-items:center;margin-bottom:120px;"></div>
-    </section>
+
+  <main class="dashboard container">
+    <h1>What is the monthly seasonality in 2024, and how does it differ by detection method?</h1>
+    <p style="max-width:900px;margin:0 auto;color:var(--muted)">Monthly Fines by Detection Method (2024)</p>
+    <div id="line-chart" class="chart-container">
+      <div class="chart-loading">Loading chart...</div>
+    </div>
+    <div id="vis5-legend" style="display:flex;justify-content:center;align-items:center;margin-bottom:120px;"></div>
   </main>
+
   <footer class="footer-strip">
     <div>COS30045 DATA VISUALISATION</div>
     <div>by Cherylynn, Ng Tsung Yin, Elisa</div>
   </footer>
+
   <script src="js/visualisation5.js"></script>
 </body>
 </html>
