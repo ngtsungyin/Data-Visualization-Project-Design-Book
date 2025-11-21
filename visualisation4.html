@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interactive Speeding Enforcement Dashboard — National Trends</title>
+  <title>Interactive Speeding Enforcement Dashboard — Q4</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <nav class="navbar container">
@@ -34,16 +35,28 @@
   <a class="vis-btn" href="visualisation6.html">Visualisation 6<br><span>Location-based patterns</span></a>
 </div>
 
-    <h2 style="text-align:left;margin-top:28px;font-family:'Playfair Display',serif">1. National Trends in Speeding Fines (2008–2024)</h2>
-    <p style="text-align:left;color:var(--muted)">Shows long-term changes in fines issued nationally and compares police-issued vs camera-issued fines.</p>
+    <h2 style="text-align:left;margin-top:28px;font-family:'Playfair Display',serif;font-size: 40px;">
+      Q4 — What are the age-group patterns of speeding fines in 2023 and 2024?
+    </h2>
+    <p style="text-align:left;color:var(--muted)">
+      The visualisation shows two complementary views: a bar chart comparing total fines across age groups,
+      and a heatmap highlighting relative severity among groups.
+    </p>
 
-    <div class="chart-placeholder">[ Chart area — embed D3.js / iframe / plot here ]</div>
+    <div id="chart-container" style="justify-content: center;display:flex;gap:60px;margin-top:40px;">
+      <div id="barChart"></div>
+      <div id="heatmap"></div>
+    </div>
+
   </main>
 
   <footer class="footer-strip">
-          <div>COS30045 DATA VISUALISATION</div>
-          <div>by Cherylynn, Ng Tsung Yin, Elisa</div>
+    <div>COS30045 DATA VISUALISATION</div>
+    <div>by Cherylynn, Ng Tsung Yin, Elisa</div>
   </footer>
-  
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/visualisation4.js"></script>
+
 </body>
 </html>
